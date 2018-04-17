@@ -24,8 +24,8 @@ class CreateProyectoTable extends Migration
            $table->string('hosting', 100);
            $table->unique('hosting');
            $table->string('ruta_archivos', 200);
-           $table->enum('idiomas', ['en', 'es', 'de', 'fr', 'ru', 'ca', 'sv', 'no', 'it' ]);
-           $table->json('estructura');
+        //    $table->enum('idiomas', ['en', 'es', 'de', 'fr', 'ru', 'ca', 'sv', 'no', 'it' ]);
+        //    $table->json('estructura');
            $table->boolean('validacion');
            $table->timestamps();
         });
