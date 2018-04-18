@@ -8,6 +8,8 @@
         <meta name="author" content="">
         <link rel="icon" href="../imagenes/favicon.png">
         <title>{{ config('app.name', 'Project Tracing') }}</title>
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
         @yield('links')
 

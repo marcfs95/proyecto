@@ -13,6 +13,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
+        //se agrega el middleware para solo poder acceder a los metodos si estamos autenticados
         $this->middleware('auth');
     }
 
@@ -23,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        //si se esta logeado devuelve la vista
         return view('home');
     }
 }
