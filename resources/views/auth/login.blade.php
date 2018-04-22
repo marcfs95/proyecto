@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.loginMaster')
 
 {{-- SECCION PARA ALMACENAR LOS DIFERENTES LINKS --}}
 @section('links')

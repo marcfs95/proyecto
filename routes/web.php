@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return redirect('/dashboard');
+    // return redirect('/dashboard');
+    return view('monster.adminMonster');
 });
 
 // Auth::routes();->evitamos el acceso a este metodo copiando todas las rutas de autentificacion aqui.
