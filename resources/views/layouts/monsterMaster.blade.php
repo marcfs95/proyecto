@@ -8,7 +8,7 @@
 
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
-    <title>Monster Admin Template</title>
+    <title>ProjectsTracing</title>
     {{-- <link href="css/bootstrap.css" rel="stylesheet"> --}}
     <!-- Bootstrap Core CSS -->
     <link href="css/plantilla/bootstrap.min.css" rel="stylesheet">
@@ -24,7 +24,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> -->
 
 </head>
-<body  class="fix-header card-no-border">
+<body  class="fix-header fix-sidebar card-no-border">
     
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->

@@ -7,18 +7,14 @@
             <!-- Logo -->
             <!-- ============================================================== -->
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="javascript:void(0)">
                     <!-- Logo icon -->
                     <b>
-                        <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
-                        <!-- Dark Logo icon -->
                         <img src="images/logo-icon.png" alt="homepage" class="light-logo" />
-                        
                     </b>
                     <!--End Logo icon -->
                     <!-- Logo text -->
                     <span>
-                        <!-- dark Logo text -->
                         <img src="images/logo-text.png" alt="homepage" class="ligth-logo" />
                     </span>
                 </a>
@@ -26,14 +22,40 @@
             <!-- ============================================================== -->
             <!-- End Logo -->
             <!-- ============================================================== -->
-            <div class="navbar-collapse d-flex flex-row">
+            <div class="d-flex flex-row-reverse">
                 <!-- ============================================================== -->
-                <!-- toggle and nav items -->
+                <!-- Usuario -->
                 <!-- ============================================================== -->
-                <ul class="navbar-nav mr-auto mt-md-0 d-flex flex-row">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        {{-- <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/users/1.jpg" alt="user" class="profile-pic m-r-5" /> Doe</a>
+                        --}}
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre >
+                                <img src="images/users/1.jpg" alt="user" class="profile-pic m-r-5" />Administrador <span class="caret"></span>
+                            </a>
+                            
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+                            
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                    </li>
+                </ul>
+                <!-- ============================================================== -->
+                <!-- Notificaciones -->
+                <!-- ============================================================== -->                
+                <ul class="navbar-nav">
                     <!-- This is  -->
                     <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
-                    <li class="nav-item"> <a class="nav-link sidebartoggler hidden-sm-down text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="icon-arrow-left-circle"></i></a> </li>
+                    {{-- <li class="nav-item"> <a class="nav-link sidebartoggler hidden-sm-down text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="icon-arrow-left-circle"></i></a> </li> --}}
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-muted text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-message"></i>
@@ -61,32 +83,7 @@
                         </div>
                     </li>
                 </ul>
-                <!-- ============================================================== -->
-                <!-- User profile and search -->
-                <!-- ============================================================== -->
-                <ul class="navbar-nav my-lg-0 pull-right">
-                    <li class="nav-item dropdown">
-                        {{-- <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/users/1.jpg" alt="user" class="profile-pic m-r-5" /> Doe</a>
-                        --}}
-                                                    <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre >
-                                <img src="images/users/1.jpg" alt="user" class="profile-pic m-r-5" />toni <span class="caret"></span>
-                            </a>
 
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                                document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    @csrf
-                                </form>
-                            </div>
-                        </li>
-                    </li>
-                </ul>
             </div>
         </nav>
     </header>
@@ -96,49 +93,26 @@
     <aside class="left-sidebar">
         <!-- Sidebar scroll-->
         <div class="scroll-sidebar">
-            <!-- Usar profile -->
-            <div class="Usar-profile">
-                <!-- Usar profile image -->
-                <div class="profile-img"> <img src="../assets/images/Usars/1.jpg" alt="Usar" /> </div>
-                <!-- Usar profile text-->
-                <div class="profile-text"> <a href="#" class="dropdown-toggle link u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Markarn Doe <span class="caret"></span></a>
-                    <div class="dropdown-menu animated flipInY">
-                        <a href="#" class="dropdown-item"><i class="ti-Usar"></i> My Profile</a>
-                        <a href="#" class="dropdown-item"><i class="ti-wallet"></i> My Balance</a>
-                        <a href="#" class="dropdown-item"><i class="ti-email"></i> Inbox</a>
-                        <div class="dropdown-divider"></div> <a href="#" class="dropdown-item"><i class="ti-settings"></i> Account Setting</a>
-                        <div class="dropdown-divider"></div> <a href="login.html" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</a>
-                    </div>
-                </div>
-            </div>
-            <!-- End Usar profile text-->
             <!-- Sidebar navigation-->
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
-                    <li class="nav-small-cap">PERSONAL</li>
                     <li>
-                        <a class="has-arrow" href="#" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard <span class="label label-rounded label-success">5</span></span></a>
+                        <a href="#" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Panel Administrador</span></a>
+                    </li>
+                    <li>
+                        <a href="#" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Información general </span></a>
+                    </li>
+                    <li>
+                        <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-account-circle"></i><span class="hide-menu">Usuarios <span class="label label-rounded label-success">4</span></span></a>
                         <ul aria-expanded="false" class="collapse">
-                            <li><a href="index.html">Modern Dashboard</a></li>
-                            <li><a href="index2.html">Awesome Dashboard</a></li>
-                            <li><a href="index3.html">Classy Dashboard</a></li>
-                            <li><a href="index4.html">Analytical Dashboard</a></li>
-                            <li><a href="index5.html">Minimal Dashboard</a></li>
+                            <li><a href="app-calendar.html">Marc</a></li>
+                            <li><a href="app-chat.html">Toni</a></li>
+                            <li><a href="app-ticket.html">Javi</a></li>
+                            <li><a href="app-contact.html">Jose</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Apps</span></a>
-                        <ul aria-expanded="false" class="collapse">
-                            <li><a href="app-calendar.html">Calendar</a></li>
-                            <li><a href="app-chat.html">Chat app</a></li>
-                            <li><a href="app-ticket.html">Support Ticket</a></li>
-                            <li><a href="app-contact.html">Contact / Employee</a></li>
-                            <li><a href="app-contact2.html">Contact Grid</a></li>
-                            <li><a href="app-contact-detail.html">Contact Detail</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-email"></i><span class="hide-menu">Inbox</span></a>
+                        <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-account-box"></i><span class="hide-menu">Clientes</span></a>
                         <ul aria-expanded="false" class="collapse">
                             <li><a href="app-email.html">Mailbox</a></li>
                             <li><a href="app-email-detail.html">Mailbox Detail</a></li>
@@ -146,7 +120,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="has-arrow" href="#" aria-expanded="false"><i class="mdi mdi-chart-bubble"></i><span class="hide-menu">Ui Elements</span></a>
+                        <a class="has-arrow" href="#" aria-expanded="false"><i class="mdi mdi-chart-bubble"></i><span class="hide-menu">Estructura</span></a>
                         <ul aria-expanded="false" class="collapse">
                             <li><a href="ui-cards.html">Cards</a></li>
                             <li><a href="ui-Usar-card.html">Usar Cards</a></li>
@@ -356,14 +330,11 @@
             <!-- ============================================================== -->
             <div class="row page-titles">
                 <div class="col-md-6 col-8 align-self-center">
-                    <h3 class="text-themecolor m-b-0 m-t-0">Dashboard</h3>
+                    <h3 class="text-themecolor m-b-0 m-t-0">Albellons</h3>
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                        <li class="breadcrumb-item active">Dashboard</li>
+                        <li class="breadcrumb-item"><a href="{{ url('/') }}">Dashboard</a></li>
+                        <li class="breadcrumb-item active">Albellons</li>
                     </ol>
-                </div>
-                <div class="col-md-6 col-4 align-self-center">
-                    <a href="https://wrappixel.com/templates/monsteradmin/" class="btn pull-right hidden-sm-down btn-success"> Upgrade to Pro</a>
                 </div>
             </div>
             <!-- ============================================================== -->
@@ -378,7 +349,7 @@
                 <div class="col-sm-6">
                     <div class="card">
                         <div class="card-block">
-                            <h4 class="card-title">Daily Sales</h4>
+                            <h4 class="card-title">Progreso del proyecto</h4>
                             <div class="text-right">
                                 <h2 class="font-light m-b-0"><i class="ti-arrow-up text-success"></i> $120</h2>
                                 <span class="text-muted">Todays Income</span>

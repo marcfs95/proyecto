@@ -12,9 +12,12 @@
 */
 
 Route::get('/', function () {
-    // return redirect('/dashboard');
-    return view('monster.adminMonster');
+    return redirect('/admin');
 });
+Route::get('/landing', function () {
+    //posar vistes per provar sense haver de fer login
+    return view('monster.landing');
+})->name('landing');
 
 // Auth::routes();->evitamos el acceso a este metodo copiando todas las rutas de autentificacion aqui.
 // Rutas de autentificacion
@@ -33,4 +36,4 @@ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 // Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::get('/admin', 'DashboardController@index')->name('adminDashboard');

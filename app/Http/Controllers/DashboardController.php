@@ -25,6 +25,6 @@ class DashboardController extends Controller
     public function index()
     {
         //si se esta logeado devuelve la vista
-        return view('dashboard');
+        return view('monster.adminMonster');
     }
 }
