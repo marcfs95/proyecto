@@ -366,7 +366,103 @@ B&&(c=f.height(),u+q>c&&!v&&(d-=l,d=Math.max(c-u,d),d=Math.min(q,d),m&&a.css({to
 y=function(){x();return l()},H=function(){G=!0;f.off("touchmove",l);f.off("scroll",l);f.off("resize",y);c(document.body).off("sticky_kit:recalc",y);a.off("sticky_kit:detach",H);a.removeData("sticky_kit");a.css({position:"",bottom:"",top:"",width:""});g.position("position","");if(m)return null==p&&("left"!==r&&"right"!==r||a.insertAfter(h),h.remove()),a.removeClass(t)},f.on("touchmove",l),f.on("scroll",l),f.on("resize",y),c(document.body).on("sticky_kit:recalc",y),a.on("sticky_kit:detach",H),setTimeout(l,
 0)}};n=0;for(K=this.length;n<K;n++)b=this[n],J(c(b));return this}}).call(this);
 
-$(function(){"use strict";$(function(){$(".preloader").fadeOut()}),jQuery(document).on("click",".mega-dropdown",function(i){i.stopPropagation()});var i=function(){var i=window.innerWidth>0?window.innerWidth:this.screen.width,e=70;500>i?($("body").addClass("mini-sidebar"),$(".navbar-brand span").hide(),$(".scroll-sidebar, .slimScrollDiv").css("overflow-x","visible").parent().css("overflow","visible"),$(".sidebartoggler i").addClass("ti-menu")):($("body").removeClass("mini-sidebar"),$(".navbar-brand span").show(),$(".sidebartoggler i").removeClass("ti-menu"));var s=(window.innerHeight>0?window.innerHeight:this.screen.height)-1;s-=e,1>s&&(s=1),s>e&&$(".page-wrapper").css("min-height",s+"px")};$(window).ready(i),$(window).on("resize",i),$(".fix-header .topbar").stick_in_parent({}),$(".nav-toggler").click(function(){$("body").toggleClass("show-sidebar"),$(".nav-toggler i").toggleClass("ti-menu"),$(".nav-toggler i").addClass("ti-close")}),$(".sidebartoggler").on("click",function(){$(".sidebartoggler i").toggleClass("ti-menu")}),$(function(){for(var i=window.location,e=$("ul#sidebarnav a").filter(function(){return this.href==i}).addClass("active").parent().addClass("active");;){if(!e.is("li"))break;e=e.parent().addClass("in").parent().addClass("active")}}),$(function(){$("#sidebarnav").metisMenu()}),$(".scroll-sidebar").slimScroll({position:"left",size:"5px",height:"100%",color:"#dcdcdc"}),$("body").trigger("resize")});
+/*
+Template Name: Monster Admin
+Author: Themedesigner
+Email: niravjoshi87@gmail.com
+File: js
+*/
+$(function() {
+    "use strict";
+    $(function() {
+        $(".preloader").fadeOut();
+    });
+    jQuery(document).on('click', '.mega-dropdown', function(e) {
+        e.stopPropagation()
+    });
+    // ============================================================== 
+    // This is for the top header part and sidebar part
+    // ==============================================================  
+    var set = function() {
+        var width = (window.innerWidth > 0) ? window.innerWidth : this.screen.width;
+        var topOffset = 70;
+        if (width < 500) {
+            $("body").addClass("mini-sidebar");
+            $('.navbar-brand span').hide();
+            $(".scroll-sidebar, .slimScrollDiv").css("overflow-x", "visible").parent().css("overflow", "visible");
+            $(".sidebartoggler i").addClass("ti-menu");
+        } else {
+            $("body").removeClass("mini-sidebar");
+            $('.navbar-brand span').show();
+            $(".sidebartoggler i").removeClass("ti-menu");
+        }
+
+        var height = ((window.innerHeight > 0) ? window.innerHeight : this.screen.height) - 1;
+        height = height - topOffset;
+        if (height < 1) height = 1;
+        if (height > topOffset) {
+            $(".page-wrapper").css("min-height", (height) + "px");
+        }
+
+    };
+    $(window).ready(set);
+    $(window).on("resize", set);
+
+    // topbar stickey on scroll
+
+    $(".fix-header .topbar").stick_in_parent({
+
+    });
+
+    // this is for close icon when navigation open in mobile view
+    $(".nav-toggler").click(function() {
+        $("body").toggleClass("show-sidebar");
+        $(".nav-toggler i").toggleClass("ti-menu");
+        $(".nav-toggler i").addClass("ti-close");
+    });
+    $(".sidebartoggler").on('click', function() {
+        $(".sidebartoggler i").toggleClass("ti-menu");
+    });
+
+    // ============================================================== 
+    // Auto select left navbar
+    // ============================================================== 
+    $(function() {
+        var url = window.location;
+        var element = $('ul#sidebarnav a').filter(function() {
+            return this.href == url;
+        }).addClass('active').parent().addClass('active');
+        while (true) {
+            if (element.is('li')) {
+                element = element.parent().addClass('in').parent().addClass('active');
+            } else {
+                break;
+            }
+        }
+    });
+
+    // ============================================================== 
+    // Sidebarmenu
+    // ============================================================== 
+    $(function() {
+        $('#sidebarnav').metisMenu();
+    });
+    // ============================================================== 
+    // Slimscrollbars
+    // ============================================================== 
+    $('.scroll-sidebar').slimScroll({
+        position: 'left',
+        size: "5px",
+        height: '100%',
+        color: '#dcdcdc'
+    });
+
+    // ============================================================== 
+    // Resize all elements
+    // ============================================================== 
+    $("body").trigger("resize");
+});
+
 /* Javascript plotting library for jQuery, version 0.8.3.
 
 Copyright (c) 2007-2014 IOLA and Ole Laursen.

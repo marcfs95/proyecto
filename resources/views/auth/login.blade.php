@@ -2,8 +2,9 @@
 
 {{-- SECCION PARA ALMACENAR LOS DIFERENTES LINKS --}}
 @section('links')
-    <link href="../css/plantilla/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/auth/signin.css" rel="stylesheet">
+    {{-- <link href="../css/plantilla/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/auth/signin.css" rel="stylesheet"> --}}
+    <link rel="stylesheet" href="./css/plantilla.css">
 @endsection
 
 @section('centrado','text-center') 

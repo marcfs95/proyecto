@@ -20,7 +20,7 @@ mix.scripts(
             'resources/assets/js/plantilla/waves.js',
             'resources/assets/js/plantilla/sidebarmenu.js',
             'resources/assets/js/plantilla/sticky-kit.min.js',
-            'resources/assets/js/plantilla/custom.min.js',
+            'resources/assets/js/plantilla/custom.js',
             'resources/assets/js/plantilla/jquery.flot.js',
             'resources/assets/js/plantilla/jquery.flot.tooltip.min.js',
             'resources/assets/js/plantilla/flot-data.js',
@@ -28,17 +28,14 @@ mix.scripts(
         ],
         'public/js/plantilla.js')
 
-
     .styles(
         [
-            // 'resources/assets/css/plantilla/bootstrap.min.css',
-            // 'resources/assets/css/plantilla/animate.css',
-            // 'resources/assets/css/plantilla/spinner.css',
+            //estilos
+            'resources/assets/css/plantilla/bootstrap.min.css',
+            'resources/assets/css/plantilla/animate.css',
+            'resources/assets/css/plantilla/spinner.css',
             'resources/assets/css/plantilla/style.css',
-            'resources/assets/css/plantilla/colors/default-dark.css'
+            'resources/assets/css/plantilla/colors/default-dark.css',
+            'resources/assets/css/auth/signin.css'
         ],
-        'public/css/plantilla.css')
-
-
-
-    .sass('resources/assets/sass/app.scss', 'public/css');
+        'public/css/plantilla.css');

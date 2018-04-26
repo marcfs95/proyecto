@@ -13,7 +13,7 @@ A la nostra aplicació hi entrarán diferents tipus de usuaris :
 5. *Client*
 
 Cada usuari disposara d'un landing page diferent, adequat a les seves necesitats. Aquesta estructura es fara amb les plantilles blade propies de laravel on es poden crear components i anar insertant com si d'un trencaclosques es tractás.
-Per exemple , tendrem principal.blade.php i desdins podrem anar afegint trossos de codi com ***nav_admin.blade.php*** o ***nav_client.blade.php*** en funció de quin usuari s'ha logeat.
+Per exemple , tendrem principal.blade.php i dedins podrem anar afegint trossos de codi com ***nav_admin.blade.php*** o ***nav_client.blade.php*** en funció de quin usuari s'ha logeat.
 
 Aquesta decisió de quins privilegis té vendra donat per el **ROLE** que l'usuari té associat dins la nostra aplicació.
 

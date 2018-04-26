@@ -2,7 +2,7 @@
 
 @section('navbar')
     <header class="topbar">
-        <nav class="navbar top-navbar navbar-expand-md navbar-light d-flex flex-row">
+        <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">
             <!-- ============================================================== -->
             <!-- Logo -->
             <!-- ============================================================== -->
@@ -22,40 +22,14 @@
             <!-- ============================================================== -->
             <!-- End Logo -->
             <!-- ============================================================== -->
-            <div class="d-flex flex-row-reverse">
-                <!-- ============================================================== -->
-                <!-- Usuario -->
-                <!-- ============================================================== -->
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        {{-- <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/users/1.jpg" alt="user" class="profile-pic m-r-5" /> Doe</a>
-                        --}}
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre >
-                                <img src="images/users/1.jpg" alt="user" class="profile-pic m-r-5" />Administrador <span class="caret"></span>
-                            </a>
-                            
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
-                            
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    @csrf
-                                </form>
-                            </div>
-                        </li>
-                    </li>
-                </ul>
+            <div class="navbar-collapse">
                 <!-- ============================================================== -->
                 <!-- Notificaciones -->
                 <!-- ============================================================== -->                
-                <ul class="navbar-nav">
+                <ul class="navbar-nav mr-auto mt-md-0 ">
                     <!-- This is  -->
                     <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
-                    {{-- <li class="nav-item"> <a class="nav-link sidebartoggler hidden-sm-down text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="icon-arrow-left-circle"></i></a> </li> --}}
+                    {{-- <li class="nav-item"> <a class="nav-link sidebartoggler hidden-sm-down text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="mdi mdi-message"></i></a> </li> --}}
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-muted text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-message"></i>
@@ -83,7 +57,32 @@
                         </div>
                     </li>
                 </ul>
-
+                                <!-- ============================================================== -->
+                <!-- Usuario -->
+                <!-- ============================================================== -->
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        {{-- <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/users/1.jpg" alt="user" class="profile-pic m-r-5" /> Doe</a>
+                        --}}
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre >
+                                <img src="images/users/1.jpg" alt="user" class="profile-pic m-r-5" />Administrador <span class="caret"></span>
+                            </a>
+                            
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+                            
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
@@ -140,19 +139,19 @@
                                     <div class="round align-self-center round-success"><i class="ti-wallet"></i></div>
                                     <div class="m-l-10 align-self-center">
                                         <h3 class="m-b-0">Desarollo</h3>
-                                        <h5 class="text-muted m-b-0">Income</h5></div>
+                                        <h5 class="text-muted m-b-0">en proceso</h5></div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-            <div class="col-lg-3 col-md-6">
+            </div>
+<div class="col-lg-3 col-md-6">
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-flex flex-row">
-                                    <div class="round align-self-center round-success"><i class="ti-wallet"></i></div>
+                                    <div class="round align-self-center round-info"><i class="ti-settings"></i></div>
                                     <div class="m-l-10 align-self-center">
-                                        <h3 class="m-b-0">En cola</h3>
-                                        <h5 class="text-muted m-b-0">Income</h5></div>
+                                        <h3 class="m-b-0">Cola</h3>
+                                        <h5 class="text-muted m-b-0">pendientes</h5></div>
                                 </div>
                             </div>
                         </div>
