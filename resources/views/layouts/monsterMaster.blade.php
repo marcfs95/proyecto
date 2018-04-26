@@ -12,13 +12,14 @@
     <link rel="stylesheet" href="./css/icons/material-design-iconic-font/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="./css/icons/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/icons/themify-icons/themify-icons.css">
+    {{-- css compilados --}}
     <link rel="stylesheet" href="./css/plantilla.css">
 
 </head>
 <body  class="fix-header fix-sidebar card-no-border">
     
     <!-- ============================================================== -->
-    <!-- Preloader - style you can find in spinners.css -->
+    <!-- Preloader -->
     <!-- ============================================================== -->
     <div class="preloader">
         <svg class="circular" viewBox="25 25 50 50">
@@ -49,36 +50,12 @@
         <!-- ============================================================== -->
     </div>
 
-    {{--  @yield('javascript')  --}}
+    
     <!-- ============================================================== -->
-    <!-- All Jquery -->
+    <!-- Javascripts compilados con Laravel Mix-->
     <!-- ============================================================== -->
-    {{-- <script src="js/plantilla/jquery.min.js"></script> --}}
+
     <script src="js/plantilla.js"></script>
-    {{-- <!-- Bootstrap tether Core JavaScript -->
-    <script src="js/plantilla/tether.min.js"></script>
-    <script src="js/plantilla/bootstrap.min.js"></script>
-    <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="js/plantilla/jquery.slimscroll.js"></script>
-    <!--Wave Effects -->
-    <script src="js/plantilla/waves.js"></script>
-    <!--Menu sidebar -->
-    <script src="js/plantilla/sidebarmenu.js"></script>
-    <!--stickey kit -->
-    <script src="js/plantilla/sticky-kit.min.js"></script>
-    <!--Custom JavaScript -->
-    <script src="js/plantilla/custom.min.js"></script>
-    <!-- ============================================================== -->
-    <!-- This page plugins -->
-    <!-- ============================================================== -->
-    <!-- Flot Charts JavaScript -->
-    <script src="js/plantilla/jquery.flot.js"></script>
-    <script src="js/plantilla/jquery.flot.tooltip.min.js"></script>
-    <script src="js/plantilla/flot-data.js"></script>
-    <!-- ============================================================== -->
-    <!-- Style switcher -->
-    <!-- ============================================================== -->
-    <script src="js/plantilla/jQuery.style.switcher.js"></script> --}}
 
 </body>
 </html>
