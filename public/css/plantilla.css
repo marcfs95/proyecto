@@ -309,7 +309,7 @@ template {
     }
     .table td,
     .table th {
-        background-color: #fff !important
+        background-color: #fff !important;
     }
     .table-bordered td,
     .table-bordered th {
@@ -12955,6 +12955,7 @@ a.text-gray-dark:hover {
 @import url(../images/icons/themify-icons/themify-icons.css);
 @import url(../images/icons/flag-icon-css/flag-icon.min.css);
 @import url(../images/icons/material-design-iconic-font/css/materialdesignicons.min.css); */
+
 /* @import url(spinner.css);
 @import url(animate.css); */
 
@@ -15063,7 +15064,7 @@ form label {
 }
 
 .single-column .page-wrapper {
-    margin-left: 0px
+    margin-left: 0px;
 }
 
 .fix-width {
