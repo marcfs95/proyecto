@@ -13,6 +13,7 @@ let mix = require('laravel-mix');
 
 mix.scripts(
         [
+            //plantilla
             'resources/assets/js/plantilla/jquery.min.js',
             'resources/assets/js/plantilla/tether.min.js',
             'resources/assets/js/plantilla/bootstrap.min.js',
@@ -30,12 +31,34 @@ mix.scripts(
 
     .styles(
         [
-            //estilos
+            //plantilla estilos
             'resources/assets/css/plantilla/bootstrap.min.css',
             'resources/assets/css/plantilla/animate.css',
             'resources/assets/css/plantilla/spinner.css',
             'resources/assets/css/plantilla/style.css',
             'resources/assets/css/plantilla/colors/default-dark.css',
-            'resources/assets/css/auth/signin.css'
+            'resources/assets/css/auth/signin.css',
+            'resources/assets/css/utilidad.css'
         ],
-        'public/css/plantilla.css');
+        'public/css/plantilla.css')
+
+
+    .scripts(
+        [
+            //tablas 
+            'resources/assets/js/tablas/select2.js',
+            'resources/assets/js/tablas/main.js'
+        ],
+        'public/js/tabla.js')
+
+
+    .styles(
+        [
+            //tablas estilos
+            'resources/assets/css/tablas/main.css',
+            'resources/assets/css/tablas/util.css',
+            'resources/assets/css/tablas/animate.css',
+            'resources/assets/css/tablas/select2.css',
+            'resources/assets/css/tablas/perfect-scrollbar.css'
+        ],
+        'public/css/tabla.css');

@@ -162,80 +162,73 @@
 <!-- ============================================================== -->
 <!-- Page wrapper  -->
 <!-- ============================================================== -->
-<div class="page-wrapper">
-    <!-- ============================================================== -->
-    <!-- Container fluid  -->
-    <!-- ============================================================== -->
-    <div class="container-fluid">
+<div class="contenido-pagina">
 
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="d-flex flex-row" style="justify-content: center;">
-                            <div class="round align-self-center round-success">
-                                <i class="ti-wallet"></i>
-                            </div>
-                            <div class="m-l-10 align-self-center">
-                                <h3 class="m-b-0">Desarollo</h3>
-                                <h5 class="text-muted m-b-0">en proceso</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="d-flex flex-row" style="justify-content: center;">
-                            <div class="round align-self-center round-info">
-                                <i class="ti-settings"></i>
-                            </div>
-                            <div class="m-l-10 align-self-center">
-                                <h3 class="m-b-0">Cola</h3>
-                                <h5 class="text-muted m-b-0">pendientes</h5>
+                {{--  <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex flex-row" style="justify-content: center;">
+                                        <div class="round align-self-center round-success">
+                                            <i class="ti-wallet"></i>
+                                        </div>
+                                        <div class="m-l-10 align-self-center">
+                                            <h3 class="m-b-0">Desarollo</h3>
+                                            <h5 class="text-muted m-b-0">en proceso</h5>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Tabla -->
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Proyecto</th>
-                    <th>Estado</th>
-                    <th>Fechas límite</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <a href="javascript:void(0)">Albellons</a>
-                    </td>
-                    <td>
-                        <div class="label label-table label-success">Paid</div>
-                    </td>
-                    <td>
-                        <span class="text-muted">
-                            <i class="fa fa-clock-o"></i> dev10</span>
-                    </td>
-
-                </tr>
-
-            </tbody>
-        </table>
-
-        <!-- ============================================================== -->
-        <!-- End PAge Content -->
-        <!-- ============================================================== -->
-    </div>
-    <!-- ============================================================== -->
-    <!-- End Container fluid  -->
-    <!-- ============================================================== -->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex flex-row" style="justify-content: center;">
+                                        <div class="round align-self-center round-info">
+                                            <i class="ti-settings"></i>
+                                        </div>
+                                        <div class="m-l-10 align-self-center">
+                                            <h3 class="m-b-0">Cola</h3>
+                                            <h5 class="text-muted m-b-0">pendientes</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>  --}}
+		<div class="table100">
+					<table>
+						<thead>
+							<tr class="table100-head">
+								<th class="column1">Date</th>
+								<th class="column2">Order ID</th>
+								<th class="column3">Name</th>
+								<th class="column4">Price</th>
+								<th class="column5">Quantity</th>
+								<th class="column6">Total</th>
+							</tr>
+						</thead>
+						<tbody>
+								<tr>
+									<td class="column1">2017-09-29 01:22</td>
+									<td class="column2">200398</td>
+									<td class="column3">iPhone X 64Gb Grey</td>
+									<td class="column4">$999.00</td>
+									<td class="column5">1</td>
+									<td class="column6">$999.00</td>
+								</tr>
+								<tr>
+									<td class="column1">2017-09-29 01:22</td>
+									<td class="column2">200398</td>
+									<td class="column3">iPhone X 64Gb Grey</td>
+									<td class="column4">$999.00</td>
+									<td class="column5">1</td>
+									<td class="column6">$999.00</td>
+								</tr>
+								
+						</tbody>
+					</table>
+		</div>
 </div>
 <!-- ============================================================== -->
 <!-- footer -->

@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="./css/icons/material-design-iconic-font/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="./css/icons/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/icons/themify-icons/themify-icons.css">
-    {{-- css compilados --}}
+    {{-- css plantilla compilados --}}
     <link rel="stylesheet" href="./css/plantilla.css">
+    {{-- css tablas compilados --}}
+    <link rel="stylesheet" href="./css/tabla.css">
 
 </head>
 <body  class="fix-header fix-sidebar card-no-border">
@@ -56,6 +58,7 @@
     <!-- ============================================================== -->
 
     <script src="js/plantilla.js"></script>
+    <script src="js/tabla.js"></script>
 
 </body>
 </html>

@@ -4,7 +4,7 @@
 
 ### <center>1. Persistència</center>
 
-Les plantilles/estructura estarán enmagatzemades a la base de dades coma  atribut de projecte en format JSON. A partir d'aquí un usuari en crear un nou Projecte tendrá accés a crear una estructura des de '0' o d'un projecte ja existent. Decidit aixó la lògica s'encarregara de crear una estructura d'arbre (determinadea pel JSON) al projecte, ruta proporcionada per l'usuari per local i després pujarlo a un repositori o podríem donar l'opció de guardarla directament dins el repositori?.
+Les plantilles/estructura estarán enmagatzemades a la base de dades com atribut de projecte en format JSON. A partir d'aquí un usuari en crear un nou Projecte tendrá accés a crear una estructura des de '0' o d'un projecte ja existent. Decidit aixó la lògica s'encarregara de crear una estructura d'arbre (determinadea pel JSON) al projecte, ruta proporcionada per l'usuari per local i després pujarlo a un repositori o podríem donar l'opció de guardarla directament dins el repositori?.
 
 Els mòduls de codi es guardaran dins un camp BLOB (mediumblob o longblob).
 

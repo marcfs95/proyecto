@@ -1,0 +1,13 @@
+.contenido-pagina{
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+}
+@media (min-width:768px) {
+    .contenido-pagina {
+        margin-left: 240px
+    }
+    .footer {
+        left: 240px
+    }
+}
