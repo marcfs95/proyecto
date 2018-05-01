@@ -33,10 +33,13 @@ mix.scripts(
         [
             //plantilla estilos
             'resources/assets/css/plantilla/bootstrap.min.css',
+            'resources/assets/css/plantilla/bootstrap.min.css.map',
             'resources/assets/css/plantilla/animate.css',
             'resources/assets/css/plantilla/spinner.css',
             'resources/assets/css/plantilla/style.css',
-            'resources/assets/css/plantilla/colors/default-dark.css',
+            // TODO canviar tema a part
+            'resources/assets/css/plantilla/colors/purple-dark.css',
+            // 'resources/assets/css/plantilla/colors/default-dark.css',
             'resources/assets/css/auth/signin.css',
             'resources/assets/css/utilidad.css'
         ],

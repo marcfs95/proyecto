@@ -6314,7 +6314,12 @@ a.mytooltip {
 
 .sidebar-nav ul li a.active,
 .sidebar-nav ul li a:hover {
-    color: #009efb
+    color: red;
+}
+
+/* afegit color sidebar menu */
+.sidebar-nav span {
+    color: #90a4ae!important;
 }
 
 .sidebar-nav ul li a.active {
@@ -6426,9 +6431,10 @@ a.mytooltip {
     transform: rotate(-135deg) translate(0, -50%)
 }
 
+
 @media (min-width:768px) {
     .mini-sidebar .sidebar-nav #sidebarnav li {
-        position: relative
+        position: relative;
     }
     .mini-sidebar .sidebar-nav #sidebarnav>li>ul {
         position: absolute;
@@ -6480,7 +6486,7 @@ a.mytooltip {
     }
     .mini-sidebar .sidebar-nav #sidebarnav>li:hover>a {
         width: 260px;
-        background: #009efb;
+        background: #292b2c ;
         color: #ffffff;
         border-color: #009efb
     }

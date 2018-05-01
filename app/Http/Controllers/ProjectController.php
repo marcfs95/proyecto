@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DashboardController extends Controller
+class ProjectController extends Controller
 {
-        /**
+            /**
      * Create a new controller instance.
      *
      * @return void
      */
+    //no importa ja que esta dins rutes protegides per middleware a wep.php
     public function __construct()
     {
         //se agrega el middleware para solo poder acceder a los metodos si estamos autenticados
@@ -25,6 +26,7 @@ class DashboardController extends Controller
     public function index()
     {
         //si se esta logeado devuelve la vista
-        return view('monster.adminMonster');
+        return view('monster.adminProject');
+        // return "hola";
     }
 }

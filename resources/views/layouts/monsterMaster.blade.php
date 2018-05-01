@@ -9,13 +9,13 @@
     <link rel="icon" type="image/png" sizes="16x16" href="storage/images/favicon.png">
     <title>ProjectsTracing</title>
     {{-- iconos --}}
-    <link rel="stylesheet" href="./css/icons/material-design-iconic-font/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="./css/icons/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/icons/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="{{ asset('css/icons/material-design-iconic-font/css/materialdesignicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/icons/font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/icons/themify-icons/themify-icons.css') }}">
     {{-- css plantilla compilados --}}
-    <link rel="stylesheet" href="./css/plantilla.css">
+    <link rel="stylesheet" href="{{ asset('css/plantilla.css')}}">
     {{-- css tablas compilados --}}
-    <link rel="stylesheet" href="./css/tabla.css">
+    <link rel="stylesheet" href="{{ asset('css/tabla.css') }}">
 
 </head>
 <body  class="fix-header fix-sidebar card-no-border">
@@ -56,9 +56,8 @@
     <!-- ============================================================== -->
     <!-- Javascripts compilados con Laravel Mix-->
     <!-- ============================================================== -->
-
-    <script src="js/plantilla.js"></script>
-    <script src="js/tabla.js"></script>
+    <script src="{{ asset('js/plantilla.js')}}"></script>
+    <script src="{{ asset('js/tabla.js')}}"></script>
 
 </body>
 </html>

@@ -1,4 +1,6 @@
-@extends('layouts.monsterMaster') @section('navbar')
+@extends('layouts.monsterMaster') 
+
+@section('navbar')
 <header class="topbar">
     <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">
         <!-- ============================================================== -->
@@ -12,32 +14,27 @@
                 </b>
                 <!--End Logo icon -->
                 <!-- Logo text -->
-                <span>
+                {{-- <span>
                     <img src="images/logo-text.png" alt="homepage" class="ligth-logo" />
-                </span>
+                </span> --}}
             </a>
         </div>
         <!-- ============================================================== -->
         <!-- End Logo -->
         <!-- ============================================================== -->
         <div class="navbar-collapse">
-            <!-- ============================================================== -->
-            <!-- Notificaciones -->
-            <!-- ============================================================== -->
+
             <ul class="navbar-nav mr-auto mt-md-0 ">
                 <!-- This is  -->
                 <li class="nav-item">
-                    <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)">
+                    <a class="nav-link nav-toggler text-muted waves-effect waves-dark" href="javascript:void(0)">
                         <i class="ti-menu"></i>
                     </a>
                 </li>
-                {{--
-                <li class="nav-item">
-                    <a class="nav-link sidebartoggler hidden-sm-down text-muted waves-effect waves-dark" href="javascript:void(0)">
-                        <i class="mdi mdi-message"></i>
-                    </a>
-                </li> --}}
 
+                <!-- ============================================================== -->
+                <!-- Notificaciones -->
+                <!-- ============================================================== -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-muted text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
@@ -82,11 +79,6 @@
             <!-- ============================================================== -->
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
-                    {{--
-                    <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">
-                        <img src="images/users/1.jpg" alt="user" class="profile-pic m-r-5" /> Doe</a>
-                    --}}
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="" role="button" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false" v-pre>
@@ -110,7 +102,9 @@
         </div>
     </nav>
 </header>
-@endsection @section('aside')
+@endsection 
+
+@section('aside')
 <aside class="left-sidebar">
     <!-- Sidebar scroll-->
     <div class="scroll-sidebar">
@@ -118,11 +112,15 @@
         <nav class="sidebar-nav">
             <ul id="sidebarnav">
                 <li>
-                    <a href="#" aria-expanded="false">
+                    <a href="javascript:void(0)" aria-expanded="false">
                         <i class="mdi mdi-format-line-weight"></i>
                         <span class="hide-menu">Proyectos </span>
                     </a>
                 </li>
+                <!-- ============================================================== -->
+                <!-- Gestion administrador -->
+                <!-- ============================================================== -->
+                {{-- if (admin) --}}
                 <li>
                     <a class="has-arrow " href="#" aria-expanded="false">
                         <i class="mdi mdi-gauge"></i>
@@ -130,10 +128,13 @@
                     </a>
                     <ul aria-expanded="false" class="collapse">
                         <li>
-                            <a href="#">Gestión Usuarios</a>
+                            <a href="{{ route('nuevo-proyecto') }}">Nuevo Proyecto</a>
                         </li>
                         <li>
-                            <a href="#">Gestión Clientes</a>
+                            <a href="{{ route('usuarios') }}">Gestión Usuarios</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('clientes') }}">Gestión Clientes</a>
                         </li>
                     </ul>
                 </li>
@@ -158,72 +159,114 @@
     </div>
     <!-- End Bottom points-->
 </aside>
-@endsection @section('contenido')
+@endsection 
+
+@section('contenido')
 <!-- ============================================================== -->
 <!-- Page wrapper  -->
 <!-- ============================================================== -->
 <div class="contenido-pagina">
 
-                {{--  <div class="row">
-                        <div class="col-lg-6 col-md-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex flex-row" style="justify-content: center;">
-                                        <div class="round align-self-center round-success">
-                                            <i class="ti-wallet"></i>
-                                        </div>
-                                        <div class="m-l-10 align-self-center">
-                                            <h3 class="m-b-0">Desarollo</h3>
-                                            <h5 class="text-muted m-b-0">en proceso</h5>
-                                        </div>
+        <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="card p-3">
+                        <div class="card-body">
+                            <div class="d-flex flex-row" style="justify-content: center;">
+                                <div class="round align-self-center round-success">
+                                    <i class="ti-wallet"></i>
+                                </div>
+                                <div class="m-l-10 align-self-center">
+                                    <h3 class="m-b-0">Desarollo</h3>
+                                    <div class="row m-l-2">
+                                        <h5 class="text-muted m-b-0 text-success">en proceso</h5><span class="label label-rounded label-success m-l-3">5</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="card p-3">
+                        <div class="card-body">
+                            <div class="d-flex flex-row" style="justify-content: center;">
+                                <div class="round align-self-center round-primary">
+                                    <i class="ti-settings"></i>
+                                </div>
+                                <div class="m-l-10 align-self-center">
+                                    <h3 class="m-b-0">Cola</h3>
+                                    <div class="row m-l-2">
+                                        <h5 class="text-muted m-b-0 text-primary">pendientes</h5>
+                                        <span class="label label-rounded label-primary m-l-3">2</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex flex-row" style="justify-content: center;">
-                                        <div class="round align-self-center round-info">
-                                            <i class="ti-settings"></i>
-                                        </div>
-                                        <div class="m-l-10 align-self-center">
-                                            <h3 class="m-b-0">Cola</h3>
-                                            <h5 class="text-muted m-b-0">pendientes</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </div>  --}}
+                    </div>
+                </div>
+        </div> 
+
 		<div class="table100">
 					<table>
 						<thead>
 							<tr class="table100-head">
-								<th class="column1">Date</th>
-								<th class="column2">Order ID</th>
-								<th class="column3">Name</th>
-								<th class="column4">Price</th>
-								<th class="column5">Quantity</th>
-								<th class="column6">Total</th>
+								<th class="column1">Proyecto</th>
+								<th class="column2">Fecha Comienzo</th>
+								<th class="column3">Fecha Entrega</th>
+								<th class="column4">Dominio</th>
+								<th class="column5">Contacto</th>
+								<th class="column6">Estado</th>
 							</tr>
 						</thead>
 						<tbody>
 								<tr>
-									<td class="column1">2017-09-29 01:22</td>
-									<td class="column2">200398</td>
-									<td class="column3">iPhone X 64Gb Grey</td>
-									<td class="column4">$999.00</td>
-									<td class="column5">1</td>
-									<td class="column6">$999.00</td>
+									<td class="column1">
+                                        {{-- <a href="{{ route('project', [$proyecto->slug]) }}"> {{ $proyecto->nombre }}</a> --}}
+                                        <a href="{{ route('project', ['albellons']) }}">
+                                        Albellons
+                                    </a>
+                                    </td>
+									<td class="column2">20/04/2018</td>
+									<td class="column3">26/06/2018</td>
+									<td class="column4"><a href="">www.dominio.com</a></td>
+									<td class="column5">Pedro</td>
+									<td class="column6">
+                                        <div class="progress m-t-5">
+                                            <div class="progress-bar bg-warning" style="width: 75%; height:15px;" role="progressbar">75%</div>
+                                        </div></td>
 								</tr>
 								<tr>
-									<td class="column1">2017-09-29 01:22</td>
-									<td class="column2">200398</td>
-									<td class="column3">iPhone X 64Gb Grey</td>
-									<td class="column4">$999.00</td>
-									<td class="column5">1</td>
-									<td class="column6">$999.00</td>
+									<td class="column1">Albellons</td>
+									<td class="column2">20/04/2018</td>
+									<td class="column3">26/06/2018</td>
+									<td class="column4"><a href="">www.dominio.com</a></td>
+									<td class="column5">Pedro</td>
+									<td class="column6">
+                                        <div class="progress m-t-5">
+                                            <div class="progress-bar bg-danger" style="width: 20%; height:15px;" role="progressbar">10%</div>
+                                        </div></td>
+								</tr>
+								<tr>
+									<td class="column1">Albellons</td>
+									<td class="column2">20/04/2018</td>
+									<td class="column3">26/06/2018</td>
+									<td class="column4"><a href="">www.dominio.com</a></td>
+									<td class="column5">Pedro</td>
+									<td class="column6">
+                                        <div class="progress m-t-5">
+                                            <div class="progress-bar bg-success" style="width: 100%; height:15px;" role="progressbar">100%</div>
+                                        </div></td>
+								</tr>
+								<tr>
+									<td class="column1">Albellons</td>
+									<td class="column2">20/04/2018</td>
+									<td class="column3">26/06/2018</td>
+									<td class="column4"><a href="">www.dominio.com</a></td>
+									<td class="column5">Pedro</td>
+									<td class="column6">
+                                        <div class="progress m-t-5">
+                                            <div class="progress-bar bg-danger" style="width: 35%; height:15px;" role="progressbar">40%</div>
+                                        </div></td>
 								</tr>
 								
 						</tbody>

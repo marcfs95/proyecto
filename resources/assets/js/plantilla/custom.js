@@ -18,22 +18,20 @@ $(function() {
     var set = function() {
         var width = (window.innerWidth > 0) ? window.innerWidth : this.screen.width;
         var topOffset = 70;
-        if (width < 500) {
+        // if (width < 500) {
+        if (width < 768 ) {
             $("body").addClass("mini-sidebar");
             $('.navbar-brand span').hide();
             $(".scroll-sidebar, .slimScrollDiv").css("overflow-x", "visible").parent().css("overflow", "visible");
-            $(".sidebartoggler i").addClass("ti-menu");
+            $(".nav-toggler i").addClass("ti-menu");
+            $('.contenido-pagina').removeClass("contenido-extendido");
+            $('.contenido-pagina').addClass("contenido-no-sidebar");
         } else {
             $("body").removeClass("mini-sidebar");
             $('.navbar-brand span').show();
-            $(".sidebartoggler i").removeClass("ti-menu");
-        }
-
-        var height = ((window.innerHeight > 0) ? window.innerHeight : this.screen.height) - 1;
-        height = height - topOffset;
-        if (height < 1) height = 1;
-        if (height > topOffset) {
-            $(".page-wrapper").css("min-height", (height) + "px");
+            $(".nav-toggler i").addClass("ti-menu");
+            $('.contenido-pagina').removeClass("contenido-no-sidebar");
+            $('.contenido-pagina').removeClass("contenido-extendido");
         }
 
     };
@@ -48,9 +46,20 @@ $(function() {
 
     // this is for close icon when navigation open in mobile view
     $(".nav-toggler").click(function() {
-        $("body").toggleClass("show-sidebar");
-        $(".nav-toggler i").toggleClass("ti-menu");
-        $(".nav-toggler i").addClass("ti-close");
+        var width = (window.innerWidth > 0) ? window.innerWidth : this.screen.width;
+        
+        $("body").toggleClass("mini-sidebar");
+        $('.navbar-brand span').hide();
+        
+        if (width < 768 ) {
+            $('.contenido-pagina').removeClass("contenido-extendido");
+            $('.contenido-pagina').removeClass("contenido-no-sidebar");
+
+        }else{
+            $('.contenido-pagina').toggleClass("contenido-extendido");
+            $('.contenido-pagina').removeClass("contenido-no-sidebar");
+
+        }
     });
     $(".sidebartoggler").on('click', function() {
         $(".sidebartoggler i").toggleClass("ti-menu");

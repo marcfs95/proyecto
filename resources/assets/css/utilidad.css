@@ -5,9 +5,18 @@
 }
 @media (min-width:768px) {
     .contenido-pagina {
-        margin-left: 240px
+        margin-left: 240px;
     }
     .footer {
         left: 240px
     }
+}
+
+.contenido-extendido{
+    width: 100%;
+    margin-left: 0px;
+    padding-left: 100px;
+}
+.contenido-no-sidebar{
+    width: 100%;
 }

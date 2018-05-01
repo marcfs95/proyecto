@@ -194,35 +194,41 @@ tbody tr {
 tbody tr:hover {
   color: #555555;
   background-color: #f5f5f5;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .column1 {
   width: 260px;
   padding-left: 40px;
+  text-align: center;
+  cursor: pointer;
 }
 
 .column2 {
   width: 160px;
+  text-align: center;
 }
 
 .column3 {
   width: 245px;
+  text-align: center;
 }
 
 .column4 {
   width: 110px;
-  text-align: right;
+  text-align: center;
+cursor: pointer;
+  
 }
 
 .column5 {
   width: 170px;
-  text-align: right;
+  text-align: center;
 }
 
 .column6 {
   width: 222px;
-  text-align: right;
+  text-align: center;
   padding-right: 62px;
 }
 
@@ -260,32 +266,41 @@ tbody tr:hover {
     top: 0;
   }
   table tbody tr td:nth-child(1):before {
-    content: "hola";
+    content: "Proyecto";
     font-weight: bold;
     color: palevioletred;
+    text-align: left;
     
   }
   table tbody tr td:nth-child(2):before {
-    content: "Order ID";
-  }
-  table tbody tr td:nth-child(3):before {
-    content: "Name";
-  }
-  table tbody tr td:nth-child(4):before {
-    content: "Price";
-  }
-  table tbody tr td:nth-child(5):before {
-    content: "Quantity";
-  }
-  table tbody tr td:nth-child(6):before {
-    content: "Total";
-  }
-
-  .column4,
-  .column5,
-  .column6 {
+    content: "Fecha inicial";
     text-align: left;
   }
+  table tbody tr td:nth-child(3):before {
+    content: "Fecha entrega";
+    text-align: left;
+  }
+  table tbody tr td:nth-child(4):before {
+    content: "Dominio";
+    text-align: left;
+  }
+  table tbody tr td:nth-child(5):before {
+    content: "Cliente";
+    text-align: left;
+  }
+  table tbody tr td:nth-child(6):before {
+    content: "Estado";
+    text-align: left;
+  }
+
+  /* .column4,
+  .column5, */
+  .column6 {
+    text-align: right;
+    padding-right: 0px; 
+  }
+
+
 
   .column4,
   .column5,

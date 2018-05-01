@@ -12,12 +12,12 @@
 */
 
 Route::get('/', function () {
-    return redirect('/admin');
+    return redirect('/landing');
 });
-Route::get('/landing', function () {
-    //posar vistes per provar sense haver de fer login
-    return view('monster.landing');
-})->name('landing');
+// Route::get('/landing', function () {
+//     //posar vistes per provar sense haver de fer login
+//     return view('monster.landing');
+// })->name('landing');
 
 // Auth::routes();->evitamos el acceso a este metodo copiando todas las rutas de autentificacion aqui.
 // Rutas de autentificacion
@@ -35,5 +35,29 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
-// Rutas para administracion
-Route::get('/admin', 'DashboardController@index')->name('adminDashboard');
+// Ruta landing inicial
+Route::get('/landing', 'LandingController@index')->name('inicio');
+
+// Grupo de rutas para administacion /admin/...
+Route::group(['prefix' => 'admin'], function () {
+
+    // Ruta para proyecto concreto
+    Route::get('/{proyecto}', 'ProjectController@index')->name('project');
+    
+    // Ruta para crear nuevo proyecto
+    Route::get('nuevo-proyecto', function(){
+        return "creacion de nuevo proyecto";
+    })->name('nuevo-proyecto');
+
+    // Ruta para gestionar usuarios
+    Route::get('usuarios', function(){
+        return "logistica de usuarios";
+    })->name('usuarios');
+
+    // Ruta para gestionar clientes
+    Route::get('clientes', function(){
+        return "logistica de clientes";
+    })->name('clientes');
+
+});
+
