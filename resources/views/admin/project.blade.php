@@ -180,7 +180,7 @@
                         <div class="col-md-6 col-8 align-self-center">
                             {{-- <h3 class="text-themecolor m-b-0 m-t-0">Nombre de proyecto</h3> --}}
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="javascript:void(0)">Inicio</a></li>
+                                <li class="breadcrumb-item"><a href="{{ url('/landing') }}">Inicio</a></li>
                                 <li class="breadcrumb-item active"> nombre de proyecto</li>
                             </ol>
                         </div>

@@ -38,10 +38,11 @@ mix.scripts(
             'resources/assets/css/plantilla/spinner.css',
             'resources/assets/css/plantilla/style.css',
             // TODO canviar tema a part
-            'resources/assets/css/plantilla/colors/purple-dark.css',
-            // 'resources/assets/css/plantilla/colors/default-dark.css',
-            'resources/assets/css/auth/signin.css',
-            'resources/assets/css/utilidad.css'
+            // 'resources/assets/css/plantilla/colors/purple-dark.css',
+            'resources/assets/css/plantilla/colors/default-dark.css',
+            'resources/assets/css/TONI/utilidad.css',
+            //CSS de login
+            'resources/assets/css/TONI/auth/signin.css'
         ],
         'public/css/plantilla.css')
 
@@ -58,10 +59,10 @@ mix.scripts(
     .styles(
         [
             //tablas estilos
-            'resources/assets/css/tablas/main.css',
-            'resources/assets/css/tablas/util.css',
-            'resources/assets/css/tablas/animate.css',
-            'resources/assets/css/tablas/select2.css',
-            'resources/assets/css/tablas/perfect-scrollbar.css'
+            'resources/assets/css/TONI/tablas/main.css',
+            'resources/assets/css/TONI/tablas/util.css',
+            'resources/assets/css/TONI/tablas/animate.css',
+            'resources/assets/css/TONI/tablas/select2.css',
+            'resources/assets/css/TONI/tablas/perfect-scrollbar.css'
         ],
         'public/css/tabla.css');
