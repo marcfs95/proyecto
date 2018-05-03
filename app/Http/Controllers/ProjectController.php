@@ -26,7 +26,7 @@ class ProjectController extends Controller
     public function index()
     {
         //si se esta logeado devuelve la vista
+        //TODO logeado como administrador, sino devuelve otra vista
         return view('admin.project');
-        // return "hola";
     }
 }

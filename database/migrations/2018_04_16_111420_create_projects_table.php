@@ -19,13 +19,16 @@ class CreateProjectsTable extends Migration
            $end_time = \Carbon\Carbon::now()->addMonths(3)->toDateTimeString();
 
            $table->increments('id');
+           $table->string('name', 200);
+           $table->string('dominio', 200);
+           $table->string('contacto', 200);
+           $table->tinyInteger('state');
+           $table->string('hosting', 100)->unique();
+           $table->string('structure_path', 200);
+           $table->string('language',50);
+           $table->boolean('validation');
            $table->timestamp('start_time')->default($current_time);
            $table->timestamp('end_time')->default($end_time);
-           $table->string('hosting', 100)->unique();
-           $table->string('files_path', 200);
-           $table->enum('languages', ['en', 'es', 'de', 'fr', 'ru', 'ca', 'sv', 'no', 'it' ]);
-        //    $table->json('estructura');
-           $table->boolean('validation');
            $table->timestamps();
         });
     }

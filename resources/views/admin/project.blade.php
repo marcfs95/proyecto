@@ -264,9 +264,9 @@
                 <!-- ============================================================== -->
                 <!-- Tareas a realizar  -->
                 <!-- ============================================================== -->
-                <div class="card-body">
+                <div class="card-body m-t-50">
                         <button class="pull-right btn btn-sm btn-rounded btn-success" data-toggle="modal" data-target="#myModal">Add Task</button>
-                        <h4 class="card-title">To Do list</h4>
+                        <h4 class="card-title">Lista de Tareas</h4>
                         <!-- ============================================================== -->
                         <!-- To do list widgets -->
                         <!-- ============================================================== -->
@@ -276,7 +276,7 @@
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h4 class="modal-title">Add Task</h4>
+                                            <h4 class="modal-title">Añadir tarea</h4>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">×</span>
                                             </button>
@@ -307,13 +307,11 @@
                                 <li class="list-group-item" data-role="task">
                                     <div class="checkbox checkbox-info">
                                         <input type="checkbox" id="inputSchedule" name="inputCheckboxesSchedule">
-                                        <label for="inputSchedule" class=""> <span>Schedule meeting with</span> </label>
+                                        <label for="inputSchedule" class=""> <span>Primera tarea</span> </label>
                                     </div>
                                     <ul class="assignedto">
-                                        <li><img src="../assets/images/users/1.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Steave"></li>
-                                        <li><img src="../assets/images/users/2.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Jessica"></li>
-                                        <li><img src="../assets/images/users/3.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Priyanka"></li>
-                                        <li><img src="../assets/images/users/4.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Selina"></li>
+                                        <li><img src="../storage/images/users/1.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Steave"></li>
+                                        <li><img src="../storage/images/users/2.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Jessica"></li>
                                     </ul>
                                 </li>
                                 <li class="list-group-item" data-role="task">
@@ -322,8 +320,7 @@
                                         <label for="inputCall" class=""> <span>Give Purchase report to</span> <span class="label label-light-danger">Today</span> </label>
                                     </div>
                                     <ul class="assignedto">
-                                        <li><img src="../assets/images/users/3.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Priyanka"></li>
-                                        <li><img src="../assets/images/users/4.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Selina"></li>
+                                        <li><img src="../storage/images/users/2.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="Priyanka"></li>
                                     </ul>
                                 </li>
                                 <li class="list-group-item" data-role="task">
